@@ -23,7 +23,30 @@ jobs:
           unzip -q "$ZIP" -d extracted
           echo "PROJECT_DIR=$(find extracted -name pubspec.yaml -printf '%h\n' | head -n 1)" >> $GITHUB_ENV
 
-      - name: Crear plataforma Android
+      - name: Corregir llamada drawCircle
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          p = Path(os.environ["PROJECT_DIR"]) / "lib" / "main.dart"
+          s = p.read_text()
+
+          s, count = re.subn(
+              r'canvas\.drawCircle\(wallStart!,\s*Paint\(\)',
+              'canvas.drawCircle(wallStart!, 4, Paint()',
+              s,
+              count=1
+          )
+
+          if count != 1:
+              raise SystemExit("No se encontro la llamada drawCircle")
+
+          p.write_text(s)
+          print("Correccion aplicada correctamente")
+          PY
+
         run: |
           cd "$PROJECT_DIR"
           flutter create --platforms=android .
