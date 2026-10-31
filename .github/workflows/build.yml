@@ -1,0 +1,41 @@
+
+name: Compilar PORT7LLO CAD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+
+      - name: Preparar Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Extraer proyecto
+        run: |
+          mkdir extracted
+          ZIP=$(find . -maxdepth 1 -iname "*.zip" | head -n 1)
+          unzip -q "$ZIP" -d extracted
+          echo "PROJECT_DIR=$(find extracted -name pubspec.yaml -printf '%h\n' | head -n 1)" >> $GITHUB_ENV
+
+      - name: Crear plataforma Android
+        run: |
+          cd "$PROJECT_DIR"
+          flutter create --platforms=android .
+          flutter pub get
+
+      - name: Compilar APK
+        run: |
+          cd "$PROJECT_DIR"
+          flutter build apk --release
+
+      - name: Entregar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: PORT7LLO-CAD-Android-APK
+          path: extracted/**/build/app/outputs/flutter-apk/app-release.apk
