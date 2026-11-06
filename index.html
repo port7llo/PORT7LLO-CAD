@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PORT7LLO ofrece instalaciones eléctricas, cielos falsos y sistemas de seguridad en Usulután y zonas cercanas.">
+  <meta name="theme-color" content="#101010">
+  <title>PORT7LLO | Soluciones eléctricas y más</title>
+  <style>
+    :root{--bg:#101010;--panel:#191919;--gold:#d7ad55;--gold2:#f0d38d;--text:#f7f5ef;--muted:#b8b5ad;--line:#34312a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#101010ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:1.65rem;font-weight:900;letter-spacing:2px}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:#17130b;font-weight:800;padding:13px 20px;border-radius:5px;transition:.2s;border:1px solid var(--gold)}
+    .btn:hover{background:var(--gold2);transform:translateY(-2px)}.btn.outline{background:transparent;color:var(--gold)}
+    .hero{padding:92px 0 78px;background:radial-gradient(ellipse at 80% 30%,#5b47231c,transparent 42%),linear-gradient(135deg,#111 45%,#1b1914)}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:.78rem;font-weight:800}
+    h1{font-size:clamp(2.7rem,7vw,5.2rem);line-height:1.03;max-width:780px;margin:18px 0}
+    h1 em{font-style:normal;color:var(--gold)}.hero p{color:var(--muted);font-size:1.12rem;max-width:650px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .hero-note{margin-top:38px;color:#8f8a7e;font-size:.9rem}
+    section{padding:76px 0}.section-head{max-width:680px;margin-bottom:32px}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.12;margin:10px 0}.section-head p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service,.project,.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:25px}
+    .service .symbol{width:48px;height:48px;border:1px solid #80652f;border-radius:8px;display:grid;place-items:center;color:var(--gold);font-size:1.45rem;margin-bottom:18px}
+    .service h3,.project h3{margin:0 0 8px;font-size:1.2rem}.service p,.project p{margin:0;color:var(--muted);font-size:.96rem}
+    .band{background:#17150f;border-top:1px solid #3b3120;border-bottom:1px solid #3b3120}
+    .band-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.band h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0}.band p{color:var(--muted);margin:8px 0 0}
+    .projects{grid-template-columns:repeat(3,1fr)}
+    .project-visual{height:150px;border-radius:6px;margin-bottom:17px;display:grid;place-items:center;background:linear-gradient(135deg,#302719,#171717);border:1px solid #4c3c20;color:var(--gold);font-size:2rem}
+    .project small{display:block;color:var(--gold);margin-bottom:5px;text-transform:uppercase;letter-spacing:1px}
+    .about{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+    .about-panel{padding:30px;border:1px solid var(--line);border-radius:9px;background:linear-gradient(145deg,#1c1b18,#131313)}
+    .checks{padding:0;list-style:none}.checks li{margin:12px 0;color:var(--muted)}.checks li:before{content:"✓";color:var(--gold);font-weight:bold;margin-right:10px}
+    .contact{background:#17150f}.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact-card p{color:var(--muted);margin:6px 0 18px}.contact-card strong{color:var(--gold)}
+    footer{padding:25px 0;border-top:1px solid var(--line);color:#938f86;font-size:.88rem}
+    .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:20;background:#20b968;color:#062b17;border-radius:50px;padding:13px 18px;font-weight:900;box-shadow:0 8px 28px #0008}
+    @media(max-width:760px){.navlinks{display:none}.grid,.projects{grid-template-columns:1fr}.about,.contact-layout{grid-template-columns:1fr}.hero{padding:70px 0 60px}.band-inner{align-items:flex-start;flex-direction:column}section{padding:58px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap"><nav>
+    <a class="brand" href="#inicio">PORT<span>7</span>LLO</a>
+    <div class="navlinks"><a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a></div>
+    <a class="btn" href="https://wa.me/50371714374?text=Hola%20PORT7LLO%2C%20quisiera%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener">Cotizar</a>
+  </nav></div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div class="eyebrow">Soluciones eléctricas y más</div>
+      <h1>Protegemos tu espacio,<br><em>iluminamos tu futuro.</em></h1>
+      <p>Soluciones profesionales para tu hogar y negocio: instalaciones eléctricas, cielos falsos y sistemas de seguridad en Usulután y zonas cercanas.</p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/50371714374?text=Hola%20PORT7LLO%2C%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Solicitar cotización por WhatsApp</a>
+        <a class="btn outline" href="#servicios">Conocer servicios</a>
+      </div>
+      <div class="hero-note">Atención en Usulután Este y toda la zona.</div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Lo que hacemos</div><h2>Servicios para tus espacios</h2><p>Trabajo cuidadoso, soluciones funcionales y atención profesional para cada proyecto.</p></div>
+      <div class="grid">
+        <article class="service"><div class="symbol">ϟ</div><h3>Instalaciones eléctricas</h3><p>Sistemas eléctricos residenciales y comerciales, instalaciones nuevas, mejoras y soluciones para tus necesidades.</p></article>
+        <article class="service"><div class="symbol">▤</div><h3>Cielos falsos</h3><p>Acabados estéticos y modernos para renovar tus espacios, con atención a los detalles y una presentación limpia.</p></article>
+        <article class="service"><div class="symbol">⌁</div><h3>Seguridad y cámaras</h3><p>Instalación y configuración de cámaras de seguridad para ayudarte a proteger lo que más importa.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band"><div class="wrap band-inner">
+    <div><h2>¿Tienes un proyecto en mente?</h2><p>Cuéntanos qué necesitas y conversemos sobre una solución.</p></div>
+    <a class="btn" href="https://wa.me/50371714374?text=Hola%20PORT7LLO%2C%20tengo%20un%20proyecto%20y%20quiero%20cotizar." target="_blank" rel="noopener">Hablemos por WhatsApp</a>
+  </div></section>
+
+  <section id="nosotros">
+    <div class="wrap about">
+      <div><div class="eyebrow">Sobre PORT7LLO</div><h2>Comprometidos con espacios seguros y funcionales.</h2><p style="color:var(--muted)">Ponemos a tu disposición nuestros servicios profesionales en Usulután y toda la zona. Queremos ayudarte a mejorar, proteger y darle vida a tus espacios.</p></div>
+      <div class="about-panel"><h3 style="margin-top:0;color:var(--gold)">¿Por qué contactarnos?</h3><ul class="checks"><li>Atención directa y comunicación clara.</li><li>Soluciones para hogares y comercios.</li><li>Servicios eléctricos, acabados y seguridad.</li><li>Cotizaciones según las necesidades de tu proyecto.</li></ul></div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Nuestro trabajo</div><h2>Galería de proyectos</h2><p>Esta sección está preparada para mostrar fotografías reales de tus instalaciones y trabajos terminados.</p></div>
+      <div class="grid projects">
+        <article class="project"><div class="project-visual">ϟ</div><small>Instalaciones eléctricas</small><h3>Proyectos eléctricos</h3><p>Agrega aquí fotografías de trabajos residenciales y comerciales.</p></article>
+        <article class="project"><div class="project-visual">▤</div><small>Cielos falsos</small><h3>Acabados interiores</h3><p>Agrega imágenes de cielos falsos y detalles de terminación.</p></article>
+        <article class="project"><div class="project-visual">⌁</div><small>Sistemas de seguridad</small><h3>Instalación de cámaras</h3><p>Agrega fotografías de equipos y proyectos de seguridad.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Estamos para ayudarte</div><h2>Hablemos de tu proyecto</h2><p>Contáctanos para solicitar información o una cotización.</p></div>
+      <div class="contact-layout">
+        <div class="contact-card"><strong>WhatsApp / Teléfono</strong><p><a href="https://wa.me/50371714374" target="_blank" rel="noopener">+503 7171-4374</a></p><strong>Correo electrónico</strong><p><a href="mailto:port7llo@gmail.com">port7llo@gmail.com</a></p></div>
+        <div class="contact-card"><strong>Ubicación</strong><p>Usulután Este, El Salvador</p><strong>Zona de servicio</strong><p>Usulután y zonas cercanas. Consulta disponibilidad para tu localidad.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> PORT7LLO. Todos los derechos reservados.</span><span>Protegemos tu espacio, iluminamos tu futuro.</span></div></footer>
+<a class="whatsapp" href="https://wa.me/50371714374?text=Hola%20PORT7LLO" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WhatsApp ↗</a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
